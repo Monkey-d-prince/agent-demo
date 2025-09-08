@@ -16,7 +16,7 @@ const Dashboard = () => {
       title: "Clara — Unbiased Chief of Staff",
       subtitle: "Truth-teller",
       icon: "📊",
-      image: "/src/images/Clara.png",
+      image: "https://iili.io/KxRu0og.md.png",
       component: <ChiefOfStaffAgent />,
       description:
         "Automated, unbiased reporting directly to leadership. No filters, pure data-driven insights for faster, more confident decisions.",
@@ -26,7 +26,7 @@ const Dashboard = () => {
       title: "Ethan — Talent & Workforce Planning",
       subtitle: "Strategist", 
       icon: "🔍",
-      image: "/src/images/Ethan.png",
+      image: "https://iili.io/KxRu1Va.md.png",
       component: <TalentPlanningAgent />,
       description:
         "See beyond surface-level reporting. Clear visibility into workload distribution, early detection of overloaded employees, and smart redeployment.",
@@ -36,7 +36,7 @@ const Dashboard = () => {
       title: "Emily — Upskilling & Workforce Development",
       subtitle: "Mentor",
       icon: "🎓",
-      image: "/src/images/Aira.png",
+      image: "https://iili.io/KxRuaN1.md.jpg",
       component: <UpskillingAgent />,
       description:
         "From generic training to targeted upskilling. Detects skill gaps, correlates tasks with performance, and recommends personalized training.",
