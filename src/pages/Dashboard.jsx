@@ -36,7 +36,7 @@ const Dashboard = () => {
       title: "Emily — Upskilling & Workforce Development",
       subtitle: "Mentor",
       icon: "🎓",
-      image: "https://iili.io/KxRuaN1.md.jpg",
+      image: "https://iili.io/Kxj4PAg.png",
       component: <UpskillingAgent />,
       description:
         "From generic training to targeted upskilling. Detects skill gaps, correlates tasks with performance, and recommends personalized training.",
