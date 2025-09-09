@@ -26,7 +26,7 @@ const Dashboard = () => {
       title: "Ethan — Talent & Workforce Planning",
       subtitle: "Strategist", 
       icon: "🔍",
-      image: "/src/images/Ethan.png",
+      image: "https://iili.io/KxRu1Va.md.png",
       component: <TalentPlanningAgent />,
       description:
         "See beyond surface-level reporting. Clear visibility into workload distribution, early detection of overloaded employees, and smart redeployment.",
