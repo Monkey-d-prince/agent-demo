@@ -13,8 +13,8 @@ const Dashboard = () => {
   const agents = [
     {
       id: 1,
-      title: "Clara — Unbiased Chief of Staff",
-      subtitle: "Truth-teller",
+      title: "Clara",
+      subtitle: "Unbiased Chief of Staff",
       icon: "📊",
       image: "https://iili.io/KxRu0og.md.png",
       component: <ChiefOfStaffAgent />,
@@ -23,8 +23,8 @@ const Dashboard = () => {
     },
     {
       id: 2,
-      title: "Ethan — Talent & Workforce Planning",
-      subtitle: "Strategist", 
+      title: "Ethan",
+      subtitle: "Talent & Workforce Planning", 
       icon: "🔍",
       image: "https://iili.io/KxRu1Va.md.png",
       component: <TalentPlanningAgent />,
@@ -33,8 +33,8 @@ const Dashboard = () => {
     },
     {
       id: 3,
-      title: "Emily — Upskilling & Workforce Development",
-      subtitle: "Mentor",
+      title: "Emily",
+      subtitle: "Upskilling & Workforce Development",
       icon: "🎓",
       image: "https://iili.io/Kxj4PAg.png",
       component: <UpskillingAgent />,
