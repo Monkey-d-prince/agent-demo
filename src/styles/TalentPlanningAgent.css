@@ -7,11 +7,10 @@
 
 html, body {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   margin: 0 !important;
   padding: 0 !important;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 #root {
@@ -36,7 +35,7 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   background: #FFFFFF;
-  min-height: auto;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -108,11 +107,11 @@ body {
 .fade-in-chart { animation: fadeIn 0.8s ease-out 0.3s both; }
 .fade-in-table { animation: fadeIn 1s ease-out 0.4s both; }
 
-/* Header Section - FILTER AT FAR RIGHT END */
+/* Header Section - RESPONSIVE DESIGN */
 .dashboard-header {
   background: linear-gradient(135deg, #A855F7 0%, #C084FC 50%, #E9D5FF 100%);
   color: white;
-  padding: 12px 0;
+  padding: clamp(8px, 2vw, 12px) 0;
   position: relative;
   overflow: hidden;
   width: 100% !important;
@@ -139,8 +138,8 @@ body {
   margin: 0 !important;
   position: relative;
   z-index: 1;
-  padding: 0 15px !important;
-  gap: 20px !important;
+  padding: 0 clamp(5px, 3vw, 15px) !important;
+  gap: clamp(10px, 3vw, 20px) !important;
 }
 
 .header-main {
@@ -150,7 +149,7 @@ body {
 }
 
 .header-main h1 {
-  font-size: 1.5rem;
+  font-size: clamp(1.125rem, 4vw, 1.5rem);
   font-weight: 700;
   margin: 0 0 5px 0;
   letter-spacing: -0.025em;
@@ -162,13 +161,13 @@ body {
 
 .header-subtitle {
   margin: 0;
-  font-size: 1.125rem;
+  font-size: clamp(0.875rem, 3vw, 1.125rem);
   opacity: 0.9;
   font-weight: 500;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* FILTER FORCED TO ABSOLUTE FAR RIGHT */
+/* RESPONSIVE FILTER CONTAINER */
 .header-meta {
   flex: 0 0 auto !important;
   flex-shrink: 0 !important;
@@ -180,14 +179,13 @@ body {
   z-index: 100 !important;
 }
 
-/* COMPREHENSIVE BORDER REMOVAL FOR FILTER */
 .filter-container {
   display: flex !important;
   align-items: center !important;
-  gap: 12px !important;
+  gap: clamp(8px, 2vw, 12px) !important;
   background: rgba(255, 255, 255, 0.15) !important;
-  padding: 10px 16px !important;
-  border-radius: 8px !important;
+  padding: clamp(8px, 2vw, 10px) clamp(10px, 3vw, 16px) !important;
+  border-radius: clamp(6px, 1.5vw, 8px) !important;
   backdrop-filter: blur(10px) !important;
   border: none !important;
   outline: none !important;
@@ -211,7 +209,7 @@ body {
 }
 
 .filter-container label {
-  font-size: 0.875rem !important;
+  font-size: clamp(0.75rem, 2vw, 0.875rem) !important;
   font-weight: 600 !important;
   white-space: nowrap !important;
   color: white !important;
@@ -223,18 +221,18 @@ body {
 }
 
 .animated-select {
-  padding: 8px 12px !important;
-  font-size: 0.875rem !important;
+  padding: clamp(6px, 1.5vw, 8px) clamp(8px, 2vw, 12px) !important;
+  font-size: clamp(0.75rem, 2vw, 0.875rem) !important;
   font-weight: 500 !important;
   border: none !important;
   outline: none !important;
-  border-radius: 6px !important;
+  border-radius: clamp(4px, 1vw, 6px) !important;
   background: rgba(255, 255, 255, 0.95) !important;
   color: #374151 !important;
   cursor: pointer !important;
   transition: all 0.3s ease !important;
-  min-width: 140px !important;
-  max-width: 180px !important;
+  min-width: clamp(100px, 20vw, 140px) !important;
+  max-width: clamp(140px, 25vw, 180px) !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
   appearance: none !important;
   -webkit-appearance: none !important;
@@ -243,7 +241,7 @@ body {
   background-position: right 8px center !important;
   background-repeat: no-repeat !important;
   background-size: 16px !important;
-  padding-right: 32px !important;
+  padding-right: clamp(24px, 6vw, 32px) !important;
   flex-shrink: 0 !important;
 }
 
@@ -304,14 +302,14 @@ body {
   outline-color: transparent !important;
 }
 
-/* Main Layout - FULL WIDTH */
+/* RESPONSIVE MAIN LAYOUT */
 .main-layout {
   display: flex;
-  gap: 8px;
+  gap: clamp(4px, 1.5vw, 8px);
   width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
-  padding: 0 15px;
+  padding: 0 clamp(5px, 3vw, 15px);
 }
 
 .content-area {
@@ -322,33 +320,33 @@ body {
 
 .ai-sidebar {
   width: 32%;
-  min-width: 280px;
-  max-width: 380px;
+  min-width: clamp(250px, 25vw, 280px);
+  max-width: clamp(320px, 35vw, 380px);
 }
 
-/* Section Titles */
+/* RESPONSIVE SECTION TITLES */
 .section-title {
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
   font-weight: 700;
   color: #374151;
-  margin: 0 0 8px 0;
+  margin: 0 0 clamp(4px, 1.5vw, 8px) 0;
   position: relative;
 }
 
 .section-title::after {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: clamp(-4px, -1.5vw, -8px);
   left: 0;
-  width: 60px;
-  height: 3px;
+  width: clamp(40px, 12vw, 60px);
+  height: clamp(2px, 0.5vw, 3px);
   background: linear-gradient(90deg, #A855F7, #C084FC);
   border-radius: 2px;
 }
 
-/* KPI Section - FULL WIDTH */
+/* RESPONSIVE KPI SECTION */
 .kpi-section {
-  padding: 8px 0;
+  padding: clamp(4px, 1.5vw, 8px) 0;
   background: #FEFEFE;
   width: 100% !important;
   margin: 0 !important;
@@ -356,19 +354,19 @@ body {
 
 .minimal-metrics {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(140px, 25vw, 180px), 1fr));
+  gap: clamp(4px, 1.5vw, 8px);
   width: 100%;
 }
 
 .metric-card {
   background: #FFFFFF;
   border: 1px solid #F3F4F6;
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: clamp(8px, 2vw, 12px);
+  padding: clamp(10px, 3vw, 16px);
   text-align: center;
   transition: all 0.3s ease;
-  border-left: 4px solid #A855F7;
+  border-left: clamp(2px, 0.75vw, 4px) solid #A855F7;
   box-shadow: 0 2px 8px rgba(168, 85, 247, 0.08);
 }
 
@@ -379,16 +377,16 @@ body {
 }
 
 .metric-label {
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   color: #6B7280;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 6px;
+  margin-bottom: clamp(3px, 1vw, 6px);
 }
 
 .metric-value {
-  font-size: 2.25rem;
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
   font-weight: 800;
   color: #A855F7;
 }
@@ -398,9 +396,9 @@ body {
   animation: pulse 2s infinite;
 }
 
-/* Charts Section - FULL WIDTH */
+/* RESPONSIVE CHARTS SECTION */
 .charts-section {
-  padding: 8px 0;
+  padding: clamp(4px, 1.5vw, 8px) 0;
   background: #FFFFFF;
   width: 100% !important;
   margin: 0 !important;
@@ -408,14 +406,14 @@ body {
 
 .charts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 40vw, 300px), 1fr));
+  gap: clamp(4px, 1.5vw, 8px);
   width: 100%;
 }
 
 .chart-item {
   background: #FFFFFF;
-  border-radius: 12px;
+  border-radius: clamp(8px, 2vw, 12px);
   box-shadow: 0 2px 8px rgba(168, 85, 247, 0.08);
   border: 1px solid #F3F4F6;
   overflow: hidden;
@@ -429,31 +427,31 @@ body {
 }
 
 .chart-header {
-  padding: 16px 16px 0 16px;
-  margin-bottom: 12px;
+  padding: clamp(8px, 3vw, 16px) clamp(8px, 3vw, 16px) 0 clamp(8px, 3vw, 16px);
+  margin-bottom: clamp(6px, 2vw, 12px);
 }
 
 .chart-header h4 {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 3vw, 1.125rem);
   font-weight: 700;
   color: #374151;
   margin: 0 0 4px 0;
 }
 
 .chart-subtitle {
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   color: #6B7280;
   font-weight: 500;
 }
 
 .chart-container {
-  padding: 0 16px 16px 16px;
+  padding: 0 clamp(8px, 3vw, 16px) clamp(8px, 3vw, 16px) clamp(8px, 3vw, 16px);
   width: 100%;
 }
 
-/* Heatmap Section - FULL WIDTH */
+/* RESPONSIVE HEATMAP SECTION */
 .heatmap-section {
-  padding: 8px 0;
+  padding: clamp(4px, 1.5vw, 8px) 0;
   background: #FFFFFF;
   width: 100% !important;
   margin: 0 !important;
@@ -463,25 +461,25 @@ body {
   width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
-  padding: 16px;
+  padding: clamp(8px, 3vw, 16px);
   background: #FFFFFF;
 }
 
 .heatmap-grid-fullwidth {
   display: grid;
-  grid-template-columns: 200px repeat(4, 1fr);
-  gap: 2px;
+  grid-template-columns: clamp(120px, 20vw, 200px) repeat(4, 1fr);
+  gap: clamp(1px, 0.3vw, 2px);
   background: #F3F4F6;
-  border-radius: 8px;
+  border-radius: clamp(4px, 1.5vw, 8px);
   overflow: hidden;
-  margin-bottom: 16px;
+  margin-bottom: clamp(8px, 3vw, 16px);
   width: 100%;
 }
 
 .heatmap-grid-fullwidth .heatmap-corner {
   background: #FEFEFE;
-  padding: 12px 8px;
-  font-size: 0.875rem;
+  padding: clamp(6px, 2vw, 12px) clamp(4px, 1.5vw, 8px);
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   font-weight: 700;
   color: #374151;
   display: flex;
@@ -492,8 +490,8 @@ body {
 
 .heatmap-grid-fullwidth .project-header {
   background: #F9FAFB;
-  padding: 12px 8px;
-  font-size: 0.75rem;
+  padding: clamp(6px, 2vw, 12px) clamp(4px, 1.5vw, 8px);
+  font-size: clamp(0.65rem, 1.8vw, 0.75rem);
   font-weight: 600;
   color: #374151;
   display: flex;
@@ -502,13 +500,13 @@ body {
   text-align: center;
   white-space: normal;
   line-height: 1.2;
-  min-height: 50px;
+  min-height: clamp(35px, 8vw, 50px);
 }
 
 .heatmap-grid-fullwidth .team-header {
   background: #FEFEFE;
-  padding: 12px 8px;
-  font-size: 0.875rem;
+  padding: clamp(6px, 2vw, 12px) clamp(4px, 1.5vw, 8px);
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   font-weight: 600;
   color: #374151;
   display: flex;
@@ -517,13 +515,13 @@ body {
 
 .heatmap-grid-fullwidth .heatmap-cell {
   background: #FFFFFF;
-  padding: 16px 8px;
+  padding: clamp(8px, 3vw, 16px) clamp(4px, 1.5vw, 8px);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  min-height: 50px;
+  min-height: clamp(35px, 8vw, 50px);
 }
 
 .heatmap-grid-fullwidth .heatmap-cell:hover {
@@ -535,7 +533,7 @@ body {
 
 .heatmap-grid-fullwidth .workload-percentage {
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   color: #FFFFFF;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -560,26 +558,26 @@ body {
 .heatmap-legend-fullwidth {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: clamp(8px, 3vw, 16px);
   flex-wrap: wrap;
-  padding: 8px 0 0 0;
+  padding: clamp(4px, 1.5vw, 8px) 0 0 0;
 }
 
 .heatmap-legend-fullwidth .legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.875rem;
+  gap: clamp(4px, 1.5vw, 8px);
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   font-weight: 600;
   color: #374151;
-  padding: 6px 12px;
+  padding: clamp(3px, 1.5vw, 6px) clamp(6px, 2vw, 12px);
   background: #FEFEFE;
-  border-radius: 6px;
+  border-radius: clamp(3px, 1vw, 6px);
 }
 
 .heatmap-legend-fullwidth .legend-color {
-  width: 16px;
-  height: 16px;
+  width: clamp(12px, 3vw, 16px);
+  height: clamp(12px, 3vw, 16px);
   border-radius: 4px;
 }
 
@@ -603,33 +601,33 @@ body {
   width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
-  padding: 0 16px 12px 16px;
-  margin-bottom: 12px;
+  padding: 0 clamp(8px, 3vw, 16px) clamp(6px, 2vw, 12px) clamp(8px, 3vw, 16px);
+  margin-bottom: clamp(6px, 2vw, 12px);
 }
 
 .heatmap-section .chart-header h4 {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 3vw, 1.125rem);
   font-weight: 700;
   color: #374151;
   margin: 0 0 4px 0;
 }
 
 .heatmap-section .chart-subtitle {
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   color: #6B7280;
   font-weight: 500;
 }
 
-/* AI Sidebar */
+/* RESPONSIVE AI SIDEBAR */
 .ai-insights-section {
-  padding: 8px 0;
+  padding: clamp(4px, 1.5vw, 8px) 0;
   height: 100%;
   width: 100%;
 }
 
 .ai-insights-section .section-title {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
+  font-size: clamp(1.125rem, 3.5vw, 1.5rem);
+  margin-bottom: clamp(4px, 1.5vw, 8px);
 }
 
 .unified-ai-content {
@@ -639,8 +637,8 @@ body {
 
 .ai-insights-card {
   background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 30%, #E9D5FF 70%, #DDD6FE 100%);
-  border-radius: 16px;
-  padding: 20px;
+  border-radius: clamp(10px, 3vw, 16px);
+  padding: clamp(12px, 4vw, 20px);
   transition: all 0.3s ease;
   width: 100%;
 }
@@ -650,8 +648,8 @@ body {
 }
 
 .insight-section {
-  margin-bottom: 12px;
-  padding-bottom: 8px;
+  margin-bottom: clamp(8px, 2.5vw, 12px);
+  padding-bottom: clamp(4px, 1.5vw, 8px);
   width: 100%;
 }
 
@@ -661,27 +659,27 @@ body {
 }
 
 .insight-section h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 3vw, 1.25rem);
   font-weight: 700;
   color: #7C3AED;
-  margin: 0 0 8px 0;
+  margin: 0 0 clamp(4px, 1.5vw, 8px) 0;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: clamp(4px, 1.5vw, 8px);
 }
 
 .insight-metrics {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: clamp(6px, 2vw, 10px);
   width: 100%;
 }
 
 .metric {
   text-align: center;
   background: rgba(255, 255, 255, 0.7);
-  padding: 12px 10px;
-  border-radius: 12px;
+  padding: clamp(8px, 2.5vw, 12px) clamp(6px, 2vw, 10px);
+  border-radius: clamp(8px, 2vw, 12px);
   backdrop-filter: blur(5px);
   transition: all 0.2s ease;
   width: 100%;
@@ -694,9 +692,9 @@ body {
 
 .metric-value {
   display: block;
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
   font-weight: 800;
-  margin-bottom: 6px;
+  margin-bottom: clamp(3px, 1vw, 6px);
   color: #7C3AED;
 }
 
@@ -706,7 +704,7 @@ body {
 }
 
 .metric-label {
-  font-size: 0.75rem;
+  font-size: clamp(0.65rem, 1.8vw, 0.75rem);
   color: #8B5CF6;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -714,9 +712,9 @@ body {
   opacity: 0.8;
 }
 
-/* Table Section - FULL WIDTH */
+/* RESPONSIVE TABLE SECTION */
 .table-section {
-  padding: 8px 0;
+  padding: clamp(4px, 1.5vw, 8px) 0;
   background: #FEFEFE;
   width: 100% !important;
   margin: 0 !important;
@@ -726,21 +724,21 @@ body {
   width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
-  padding: 0 15px;
+  padding: 0 clamp(5px, 3vw, 15px);
 }
 
 .table-wrapper {
   background: #FFFFFF;
-  border-radius: 12px;
+  border-radius: clamp(8px, 2vw, 12px);
   overflow-x: auto;
   width: 100%;
 }
 
 .minimal-table {
   width: 100%;
-  min-width: 800px;
+  min-width: clamp(600px, 80vw, 800px);
   border-collapse: collapse;
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
 
 .minimal-table thead {
@@ -748,16 +746,16 @@ body {
 }
 
 .minimal-table th {
-  padding: 12px 8px;
+  padding: clamp(8px, 2.5vw, 12px) clamp(4px, 1.5vw, 8px);
   text-align: left;
   font-weight: 600;
   color: #374151;
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   white-space: nowrap;
 }
 
 .minimal-table td {
-  padding: 12px 8px;
+  padding: clamp(8px, 2.5vw, 12px) clamp(4px, 1.5vw, 8px);
   vertical-align: middle;
 }
 
@@ -772,20 +770,20 @@ body {
 .employee-info {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: clamp(4px, 1.5vw, 8px);
 }
 
 .employee-name {
   font-weight: 600;
   color: #374151;
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   white-space: nowrap;
 }
 
 .risk-badge {
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 0.75rem;
+  padding: clamp(2px, 1vw, 4px) clamp(4px, 1.5vw, 8px);
+  border-radius: clamp(8px, 2vw, 12px);
+  font-size: clamp(0.65rem, 1.8vw, 0.75rem);
   font-weight: 600;
   text-transform: capitalize;
   white-space: nowrap;
@@ -815,11 +813,27 @@ body {
 .recommendation-cell {
   color: #4B5563;
   line-height: 1.4;
-  max-width: 250px;
-  font-size: 0.875rem;
+  max-width: clamp(180px, 35vw, 250px);
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
 
-/* RESPONSIVE DESIGN - AGGRESSIVE FILTER POSITIONING */
+/* ENHANCED RESPONSIVE DESIGN */
+@media (max-width: 1400px) {
+  .main-layout {
+    gap: 6px;
+    padding: 0 12px;
+  }
+
+  .ai-sidebar {
+    min-width: 260px;
+    max-width: 340px;
+  }
+
+  .charts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
 @media (max-width: 1200px) {
   .main-layout {
     flex-direction: column;
@@ -839,7 +853,7 @@ body {
 
   .header-content {
     flex-direction: column !important;
-    gap: 8px !important;
+    gap: 10px !important;
     text-align: center !important;
     padding: 0 10px !important;
     position: relative !important;
@@ -860,12 +874,16 @@ body {
   }
 
   .charts-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 6px;
   }
 
+  .minimal-metrics {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
   .heatmap-grid-fullwidth {
-    grid-template-columns: 150px repeat(4, 1fr);
+    grid-template-columns: 140px repeat(4, 1fr);
   }
 }
 
@@ -886,6 +904,11 @@ body {
     gap: 6px;
   }
 
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
   .heatmap-grid-fullwidth {
     grid-template-columns: 120px repeat(4, 1fr);
   }
@@ -893,11 +916,21 @@ body {
   .filter-container {
     flex-direction: column !important;
     gap: 8px !important;
-    padding: 12px !important;
+    padding: 10px !important;
   }
 
   .animated-select {
     min-width: 120px !important;
+    max-width: 160px !important;
+  }
+
+  .insight-metrics {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .minimal-table {
+    min-width: 500px;
   }
 }
 
@@ -910,7 +943,7 @@ body {
   }
 
   .heatmap-section .chart-header {
-    padding: 0 5px 8px 5px;
+    padding: 0 5px 6px 5px;
   }
 
   .minimal-metrics {
@@ -920,16 +953,48 @@ body {
 
   .filter-container {
     gap: 6px !important;
-    padding: 10px !important;
+    padding: 8px !important;
   }
 
   .header-main h1 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   .animated-select {
     min-width: 100px !important;
-    font-size: 0.8rem !important;
+    max-width: 140px !important;
+    font-size: 0.75rem !important;
+  }
+
+  .heatmap-grid-fullwidth {
+    grid-template-columns: 100px repeat(4, 1fr);
+  }
+
+  .heatmap-legend-fullwidth {
+    gap: 8px;
+  }
+
+  .minimal-table {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 360px) {
+  .minimal-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .heatmap-grid-fullwidth {
+    grid-template-columns: 80px repeat(4, 1fr);
+  }
+
+  .filter-container {
+    padding: 6px !important;
+  }
+
+  .animated-select {
+    min-width: 90px !important;
+    max-width: 120px !important;
   }
 }
 
@@ -939,8 +1004,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: clamp(4px, 1vw, 6px);
+  height: clamp(4px, 1vw, 6px);
 }
 
 ::-webkit-scrollbar-track {
