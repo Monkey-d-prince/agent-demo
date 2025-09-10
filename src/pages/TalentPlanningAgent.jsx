@@ -601,7 +601,7 @@ const TalentPlanningAgent = () => {
       </section>
 
       <section className="table-section">
-        <h2 className="section-title slide-up">Individual Employee Analytics (10 Employees)</h2>
+        <h2 className="section-title slide-up">Individual Employee Analytics </h2>
         <div className="table-container fade-in-table">
           <div className="table-wrapper">
             <table className="minimal-table">
